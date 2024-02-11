@@ -10,7 +10,7 @@ Instruções para entrega
  # 2️⃣ Calculadora de partidas Rankeadas
 **O Que deve ser utilizado**
 
-- Variáveis
+- Variáveis - ok
 - Operadores
 - Laços de repetição
 - Estruturas de decisões
@@ -38,6 +38,32 @@ Ao final deve se exibir uma mensagem:
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+
+        calculatorWinlost(57, 6);
+    }
+
+
+    public static int calculatorWinlost(int win, int lost){
+        int result = win - lost;
+        
+        if(win < 10){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Ferro");
+        }else if(win > 10 && win <= 20){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Bronze");
+        }else if(win > 20 && win <= 50){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Prata");
+        }else if(win > 50 && win <= 80){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Ouro");
+        }else if(win > 80 && win <= 90){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Diamante");
+        }else if(win > 90 && win <= 100){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Lendário");
+        }else if(win >= 101){
+            System.out.println("O Herói tem de saldo de vitorias " + result + " e está no nível Imortal");
+        }
+
+
+        return result;
     }
 }
